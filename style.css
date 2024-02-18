@@ -58,7 +58,7 @@ body{
 }
 
 .home{
-    height: 7in;
+    height: 9in;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -97,6 +97,7 @@ body{
     justify-content: center;
     width:100%;
     height:10%;
+    margin-bottom: 5vw;
 }
 
 .btn-box a{
@@ -104,11 +105,11 @@ body{
     align-items: center;
     justify-content: center;
     display: inline-flex;
-    width: 1in;
-    height: 0.35in;
+    width: 12.5vw;
+    height: 3.3vw;
     background:#f5d300;
     border-radius: 7px;
-    font-size: 19px;
+    font-size: 2vw;
     text-decoration: none;
     z-index: 1;
     font-weight: 500;
@@ -140,7 +141,11 @@ section{
     justify-content: space-between;
     width: 100%;
     height: 45%;
-
+}
+.abt1{
+    margin-top:3vw;
+    padding-bottom: 0;
+    margin-left: 25%;
 }
 .abt{
     height:auto;
@@ -188,8 +193,8 @@ hr{
     padding-left: 5vw;
     padding-right: 5vw;
 }
-.proj h1{
-    color:white;
+.proj h1, .abt1{
+    color:#ffe4b4;
     font-weight: 900;
     margin-bottom: 1%;
     font-size: 4vw;
@@ -325,7 +330,7 @@ h3{
     width:100%;
 }
 .contact h1{
-    color:white;
+    color:#ffe4b4;
     margin-top: 2%;
 }
 .con{
@@ -359,7 +364,7 @@ h3{
     height:15vw;
 }
 .send{
-    margin:3% 0 3%;
+    margin:8vw 0 3%;
     height:30%;
 }
 .chk{
@@ -386,16 +391,112 @@ body::-webkit-scrollbar-thumb {
     background-color:#0e0e2d;   
     border-radius: 20px;        
 }
+
+.hello{
+    margin-bottom:auto;
+    padding:0;
+    font-size: 3vw;
+}
+
 @media (max-width:780px){
     .bg{
         width:80vw;
         height:80vw;
         background-size: contain;
       }
-      .homect div h1{
+    .homect div h1{
         font-size: 9.5vw;
     }
-    
+    .abt{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .dec{
+        margin-bottom:4vw;
+    }
+    .abt1{
+        font-size: 7vw;
+        margin-left: 33%;
+    }
+    .me p{
+        font-size:4vw;
+        text-align: justify;
+        text-justify: inter-word;
+    }
+    .proj h1, .contact h1{
+        font-size: 7vw;
+    }
+    .cont1{
+        display:flex;
+        flex-direction: column;
+    }
+    .p11{
+        display: flex;
+        flex-direction: row;
+        width:120%;
+        height: 150%;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        margin-top: 60vw;   
+    }
+    .p22{
+        flex-direction: row-reverse;
+        width:120%;
+        justify-content: center;
+        margin-top:8vw;
+        margin-left:5vw;
+    }
+    .pro1, .pro2{
+        width:40%;
+        height:12vw;
+    }
+    .pro1{
+        margin-right:10vw;
+    }
+    .pro2{
+        margin-left:10vw;
+    }
+    .card{
+        width:32vw;
+        height:50vw;  
+    }
+    .project{
+        height:auto;
+    }
+    .proj{
+        height:125vw;
+    }
+    .con{
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    #nm{
+        margin:0;
+        margin-bottom:2vw;
+    }
+    .con input{
+        width:70%;
+        height:9vw;
+        font-size:2.5vw;
+    }
+    .comment{
+        margin-top:2vw;
+        width:70%;
+        height:25vw;
+        font-size:2.5vw;
+    }
+    hr{
+        height:0.1vw;
+    }
+    .home{ 
+        height:90vw;
+    }
+    .btn-box{
+        height:8vw;
+    }
 }
 
 @keyframes spin {
