@@ -58,6 +58,7 @@ body{
     align-items: center;
     justify-content: center;
     padding:0 10%;
+    position: relative;
 }
 
 .homect{
@@ -65,13 +66,14 @@ body{
     justify-content: center;
     align-items: center;
     width: 100%;
+    position: absolute;
     height: 100%;
 }
 
 .bg{
   position: absolute;
   width: 42%;
-  height:85%;
+  height: 85%;
   background: url('1.png') no-repeat;
   background-size: cover;
   background-position: center center;
@@ -79,7 +81,7 @@ body{
 }
 .homect div h1{
     position: relative;
-    font-size: 70px;
+    font-size: 100%;
     font-weight: 700;
     line-height: 1.2;
     font-family: "Cinzel", serif;
@@ -163,12 +165,14 @@ hr{
     display: flex;
     margin-top:3%;
     justify-content: center;
-    height:120%;
+    height:50rem;
     align-items: flex-start;
 }
 .proj{
     width:100%;
-    height: 6.4in;
+    height: auto;
+    position: relative;
+    padding-left: 5%;
 }
 .proj h1{
     color:white;
@@ -177,47 +181,84 @@ hr{
     font-size: 52px;
     padding-bottom:3%;
 }
-.cont{
-    height: 100%;
-    width:100%;
-    display:flex;
-}
+
 .card{
-    display:flex;
+    height:28rem;
+    width: 30rem;
+    margin-top:5%;
+    position: relative;
+    transition: transform 1500ms;
+    transform-style: preserve-3d;
+}
+
+.m1, .m2, .n1, .n2{
+    width:75%;
+    height:100%;
+    position: absolute;
+    top: 5%;
+    left: 95;
+    backface-visibility: hidden;
+}
+
+.m1, .m2{
+    background: url("https://d33wubrfki0l68.cloudfront.net/b4f7981051e65e227b8aeb58de82d5995f0e2fa0/69289/img/reverso-01.svg") no-repeat;
+}
+.n1,.n2{
+    margin-right:4%;
+    transform: rotateY(180deg);
+    background: url("front3.jpg") no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-position: center center;
+}
+.headn, .bodyn{
+    display: flex;
+    align-items: center;
     justify-content: center;
+
+}
+.headn{
+    height: 35%;
+    padding-left: 1.8%;
+}
+.bodyn{
+    height:35%;
+    padding-left: 15%;
+    padding-right: 13%;
+    
+}
+.n1 p, .n2 p{
+    color:black;
+}
+h3{
+    color:black;
+    font-weight: 900;
+    font-size: 0.3in;
+}
+
+.cont1{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+
+.p11, .p22{
+    display: flex;
+    flex-direction: column;
     width:50%;
     position: relative;
 }
-.card div{
-    width:70%;
-    border-radius: 10px;
+
+.pro1:hover + .card{
+    transform: rotateY(180deg);
+    transform-origin: center;
 }
-.front{
-    position:absolute;
-    backface-visibility: hidden;
-}
-.crd2{
-    transform: rotate(6deg);
-    z-index: -1;
-}
-.crd3{
-    transform: rotate(-6deg);
-    z-index: -1;
-}
-.crd4{
-    transform: rotate(3deg);
-    z-index: -1;
+.pro2:hover + .card{
+    transform: rotateY(180deg);
+    transform-origin: center;
 }
 
-.p{
-    height: 100%;
-    display:flex;
-    justify-content: center;
-    width:50%;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
 .pro1{
     display: flex;
     background: url('https://d33wubrfki0l68.cloudfront.net/img/d6052ce9346c2ad7f770968b708a599937b8f76c/services-socialmedia-bg..jpg') no-repeat;
@@ -230,7 +271,6 @@ hr{
     align-items: center;
 }
 .pro2{
-    margin-top:14%;
     display: flex;
     background: url('https://d33wubrfki0l68.cloudfront.net/img/f891adf4313b85e780ee7767baf7ab1521cedf4b/services-digital-bg..jpg') no-repeat;
     height:27%;
@@ -246,10 +286,7 @@ hr{
     display:flex;
     width:95%;
     height:90%;
-    border-radius: 15px;
-}
-.bor:hover{
-    border: 1.5px solid yellow;
+ 
 }
 
 .text{
@@ -330,7 +367,6 @@ body::-webkit-scrollbar {
     background-color:#0e0e2d;   
     border-radius: 20px;        
   }
-
 
 @keyframes spin {
     0% { transform: rotate(0deg); }
