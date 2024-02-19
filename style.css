@@ -63,6 +63,7 @@ body{
     align-items: center;
     justify-content: center;
     position: relative;
+    padding-top:0;
 }
 
 .homect{
@@ -412,23 +413,26 @@ body::-webkit-scrollbar-thumb {
     }
     .abt{
         display: flex;
+        height:60vh;
         flex-direction: column-reverse;
+        justify-content: flex-end;
     }
     .dec{
-        margin-bottom:4vw;
+        height:50%;
+        width:100%;
+        margin-bottom: 5vh;
     }
     .abt1{
         position:static;
-        font-size: 7vw;
-        margin-left: 33%;
+        font-size: 8.5vw;
+        margin-left: 28%;
     }
     .me p{
         font-size:4vw;
-        text-align: justify;
-        text-justify: inter-word;
+        text-align: center;
     }
     .proj h1, .contact h1{
-        font-size: 7vw;
+        font-size: 8.5vw;
     }
     .cont1{
         display:flex;
@@ -469,7 +473,7 @@ body::-webkit-scrollbar-thumb {
         height:auto;
     }
     .proj{
-        height:125vw;
+        height:130vw;
     }
     .con{
         display:flex;
@@ -496,7 +500,7 @@ body::-webkit-scrollbar-thumb {
         height:0.1vw;
     }
     .home{ 
-        height:90vw;
+        height:93vh;
     }
     .btn-box{
         height:8vw;
