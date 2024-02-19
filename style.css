@@ -11,7 +11,7 @@
 }
 
 body{
-    background: url("bg1.jpg");
+    background: url("assets/bg1.jpg");
     background-size: cover;
     background-attachment: fixed;
 }
@@ -79,7 +79,7 @@ body{
   position: absolute;
   width: 6in;
   height: 6in;
-  background: url('1.png') no-repeat;
+  background: url('assets/1.png') no-repeat;
   background-size: contain;
   background-position: center center;
   animation: spin 4s linear infinite;
@@ -172,7 +172,7 @@ section{
 .dec{
     width: 45vw;
     height:25vw;
-    background: url(dec.png) no-repeat;
+    background: url(assets/dec.png) no-repeat;
     background-position: center center;
     background-size: contain;
 }
@@ -221,13 +221,13 @@ hr{
 }
 
 .m1, .m2{
-    background: url("front.jpg") no-repeat;
+    background: url("assets/front.jpg") no-repeat;
     background-size: cover;
 }
 .n1,.n2{
     margin-right:4%;
     transform: rotateY(180deg);
-    background: url("front2.jpg") no-repeat;
+    background: url("assets/front2.jpg") no-repeat;
     display: flex;
     flex-direction: column;
     background-size: cover;
@@ -380,7 +380,7 @@ h3{
     align-items: center ;
     width:100%;
     background: transparent;
-    height:10%;
+    height:5%;
 }
 .hello{
     color:white;
@@ -399,7 +399,7 @@ body::-webkit-scrollbar-thumb {
 .hello{
     margin-bottom:auto;
     padding:0;
-    font-size: 3vw;
+    font-size: 2vmax;
 }
 
 @media (max-width:780px){
@@ -509,6 +509,11 @@ body::-webkit-scrollbar-thumb {
         height:8vw;
     }
 }
+
+
+
+
+
 
 @keyframes spin {
     0% { transform: rotate(0deg); }
