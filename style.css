@@ -106,8 +106,8 @@ body{
     align-items: center;
     justify-content: center;
     display: inline-flex;
-    width: 12.5vw;
-    height: 3.3vw;
+    width: 12.5vmax;
+    height: 3.3vmax;
     background:#f5d300;
     border-radius: 0.4cm;
     font-size: 2vw;
@@ -413,13 +413,13 @@ body::-webkit-scrollbar-thumb {
     }
     .abt{
         display: flex;
-        height:60vh;
+        height:60vw;
         flex-direction: column-reverse;
         justify-content: flex-end;
     }
     .dec{
-        height:50%;
-        width:100%;
+        height:40vw;
+        width:40vmax;
         margin-bottom: 5vh;
     }
     .abt1{
@@ -427,12 +427,15 @@ body::-webkit-scrollbar-thumb {
         font-size: 8.5vw;
         margin-left: 28%;
     }
+    .me{
+        height:auto;
+    }
     .me p{
-        font-size:4vw;
+        font-size:3vw;
         text-align: center;
     }
     .proj h1, .contact h1{
-        font-size: 8.5vw;
+        font-size: 4.5vmax;
     }
     .cont1{
         display:flex;
@@ -500,7 +503,7 @@ body::-webkit-scrollbar-thumb {
         height:0.1vw;
     }
     .home{ 
-        height:93vh;
+        height:85vmax;
     }
     .btn-box{
         height:8vw;
