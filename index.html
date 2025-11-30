@@ -1,107 +1,142 @@
 <html>
     <head>
-        <title>Portfolio | Namay Rohatgi</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="shortcut icon" href="assets/chk3.png">
-        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-        <link rel="stylesheet" href="style.css">
+<!-- #0a0e27 -->
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
     </head>
     <body>
-        <header class="header">
-            <div class="lo">
-                <img src="assets/chk3.png"> 
-                <a href="#" class="logo">ACHILLES</a>
-            </div> 
-            <nav class="navbar">
-                <a href="https://github.com/namay26"><i class='bx bxl-github'></i></a>
-                <a href="https://www.instagram.com/namayrohatgi/"><i class='bx bxl-instagram'></i></a>
-                <a href="https://twitter.com/NamayRohatgi"><i class='bx bxl-twitter'></i></a>
-                <a href="mailto:namayrohatgi@gmail.com"><i class='bx bxl-gmail' ></i></a>
-            </nav>
-        </header>
-    <section class="home">
-        <div class="homect">
-            <div class="bg"></div>
-            <div class="text"><h1>ACHILLES</h1></div>
+        <div class="container">
+            <div class="terminal">
+                <div class="top-bar">
+                    <div class="circle red"></div>
+                    <div class="circle yellow"></div>
+                    <div class="circle green"></div>
+                    <span class="top-bar-text"> >_ portfolio@terminal:~ </span>
+                </div>
+                <div class="terminal-body">
+                    <div class="welcome">Hi! I am <span class="name">Namay Rohatgi</span>. Welcome to my Portfolio Terminal!</div>
+                    <div class="instruction">Type 'help' to see available commands.</div>
+                    <div class="welcome">$</div>
+                </div>
+            </div>
+            <div class="text-b">
+                Try Commands like: <span class="commands welcome">help, ls, cd about</span> </br>   
+                or scroll down to explore ↓
+            </div>
         </div>
-    </section>
-    <div class="btn-box">
-        <a href="#chk">Say Hello</a>
-    </div>
-    <hr> 
-    <h1 class='abt1'>ABOUT ME</h1>
-    <section class="abt">
-        <div class="me"> 
-            <p>
-                Hi, I am <b>Namay Rohatgi (aka Achilles)</b>, a student pursuing <b>Production & Industrial Engineering</b> at <b>IIT Roorkee</b>. I have keen interest in software development and AI/ML. <br>
-                Apart from it, I like to play <b>guitar</b> and follow Football. I also like to read novels specially those pertaining to <b>Greek Mythology</b>. 
-            </p>
-        </div>
-        <div class="dec">    
-        </div>
-    </section>
-    <hr>
-    <section class="project">
-        <div class="proj">
-            <center><h1>PROJECTS</h1></center>
-            <div class="cont1">
-                <div class="p11">
-                    <div class="pro1">
-                        <div class="p1 bor">
-                            <div class="text">
-                                SYMPHONY
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="m1">
 
-                        </div>
-                        <div class="n1">
-                            <div class="headn"><center><h3>SYMPHONY</h3></center></div>
-                            <div class="bodyn"><p>A python-based application which allows you to control your machine with musical instruments.</p></div>
-                        </div>
-                    </div>
+        <div class="container section">
+            <div class="title"> <span class="char">~/</span> about me</div>
+            <div class="about-body">
+                <div class="cat">$ cat about.txt</div>
+                <div class="about-text"> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit, soluta neque non veniam error inventore, amet quibusdam adipisci maiores magni distinctio odit numquam nulla. Omnis magnam modi vero hic vel?</div>
+            </div>
+        </div>
+
+        <div class="container section">
+            <div class="title"> <span class="char">~/</span> projects</div>
+            <div class="about-body">
+                <div class="cat">$ ls -la ~/projects</div>
+                <div class="project-card">
+                    <div class="project-title">sample/</div>
+                    <div class="project-desc">abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz</div>
+                    <div class="project-link"> Github </div>
                 </div>
-                <div class="p22">
-                    <div class="pro2">
-                        <div class="p2 bor">
-                            <div class="text">
-                               BLOCKSCORE
+                <div class="project-card">
+                    <div class="project-title">sample/</div>
+                    <div class="project-desc">abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz</div>
+                    <div class="project-link"> Github </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-title">sample/</div>
+                    <div class="project-desc">abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz</div>
+                    <div class="project-link"> Github </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container section">
+            <div class="title"> <span class="char">~/</span> skills</div>
+            <div class="about-body">
+                <div class="cat">$ ./show-skills.sh</div>
+                <div class="skills-container">
+                    <div class="about-body tech-stack">
+                        <div class="list-all">
+                            <div class="cat"> [Frontend] </div>
+                            <div>
+                                <ul>
+                                    <li>React</li>
+                                    <li>TypeScript</li>
+                                    <li>Vue.js</li>
+                                    <li>Next.js</li>
+                                    <li>Tailwind CSS</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="list-all">
+                            <div class="cat"> [Backend] </div>
+                            <div>
+                                <ul>
+                                    <li>Node.js</li>
+                                    <li>Golang</li>
+                                    <li>MongoDB</li>
+                                    <li>MySQL</li>
+                                    <li>Python</li>
+                                </ul>
                             </div>
                         </div>
                     </div>
-                    <div class="card">
-                        <div class="m2">
+                    <div class="about-body tech-stack">
+                        <div class="list-all">
+                            <div class="cat"> [Tools] </div>
+                            <div>
+                                <ul>
+                                    <li>Git</li>
+                                    <li>Docker</li>
+                                    <li>Linux</li>
+                                    <li>WireShark</li>
+                                    <li>Figma</li>
+                                </ul>
+                            </div>
                         </div>
-                        <div class="n2">
-                            <div class="headn"><center><h3>BLOCKSCORE</h3></center></div>
-                            <div class="bodyn"><p>A Web3 application to take over the existing sports leagues' governing body.</p></div>
+                        <div class="list-all">
+                            <div class="cat"> [Concepts] </div>
+                            <div>
+                                <ul>
+                                    <li>System Design</li>
+                                    <li>API Design</li>
+                                    <li>Database Design</li>
+                                    <li>CI/CD</li>
+                                    <li>Testing</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
-    <hr>
-    <section class="chk" id="chk">
-        <div class="contact">
-            <center><h1>CONTACT ME</h1></center>
-            <div class="con">
-                <input placeholder="Name" id="nm">
-                <input placeholder="Email">
+
+        <div class="container section">
+            <div class="title"> <span class="char">~/</span> contact</div>
+            <div class="about-body contact-body">
+                <div class="cat contact-cat">$ cat contact_info.json</div>
+                <div class="project-card contact">
+                    <div class="project-desc">
+<!-- Thinking of a better way to do this? Probably make a json-card like container, but idk -->
+                        <pre>
+{
+    "email" : "namayrohatgi@gmail.com",
+    "github" : "github.com/namay26",
+    "linkedin" : "linkedin.com/in/NamayRohatgi",
+    "twitter" : "@NamayRohatgi"
+}
+                        </pre>
+                    </div>
+                </div>
+                <div class="final">
+                    Feel free to reach out! Type <span class="cat">help</span> in the terminal above to explore more commands.
+                </div>
             </div>
-            <div class="comm">
-                <textarea class="comment" placeholder="Anything you wish to say!"></textarea>
-            </div>
-            <div class="btn-box send">
-                <a href="#">Send</a>
-           </div>
         </div>
-    </section>
-    <footer class="end">
-        <div class="hello">© Made with love by <b>Namay Rohatgi</b></div>
-    </footer>
     </body>
 </html>
-
