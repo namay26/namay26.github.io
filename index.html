@@ -1,6 +1,8 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
     <head>
-<!-- #0a0e27 -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
     </head>
@@ -13,10 +15,10 @@
                     <div class="circle green"></div>
                     <span class="top-bar-text"> >_ portfolio@terminal:~ </span>
                 </div>
-                <div class="terminal-body">
+                <div class="terminal-body" id="terminal-body">
                     <div class="welcome">Hi! I am <span class="name">Namay Rohatgi</span>. Welcome to my Portfolio Terminal!</div>
                     <div class="instruction">Type 'help' to see available commands.</div>
-                    <div class="welcome">$</div>
+                    <div class="welcome" id="repeat-input">$ <input type="text" class="terminal-input" id="terminal-text" autofocus> </div>
                 </div>
             </div>
             <div class="text-b">
@@ -29,7 +31,11 @@
             <div class="title"> <span class="char">~/</span> about me</div>
             <div class="about-body">
                 <div class="cat">$ cat about.txt</div>
-                <div class="about-text"> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit, soluta neque non veniam error inventore, amet quibusdam adipisci maiores magni distinctio odit numquam nulla. Omnis magnam modi vero hic vel?</div>
+                <div class="about-text"> <span class="name">Namay Rohatgi</span> is a Full Stack Developer with a passion for technology and a love for problem-solving. He has a strong background in software development and a deep understanding of the latest trends and technologies in the industry. He is a quick learner and a team player, and he is always looking for new challenges to take on. 
+                </br>
+            </br>
+                He has completed his <a href="https://summerofcode.withgoogle.com/archive/2025/projects/lSllhsuW" target="_blank"><span class="hyperabout">Google Summer of Code 2025</span></a> as a Student Contributor at Glutton, The Honetnet Network and has worked as a cohort member in <a href="https://pldg.xyz/" target="_blank"><span class="hyperabout">Protocol Labs' Developers Guild (PLDG)</span></a>. He is an active open-source contributor. He is also a developer at <a href="https://sdslabs.co/" target="_blank"><span class="hyperabout">SDSLabs</span></a> and <a href="https://blocsoc.iitr.ac.in/" target="_blank"><span class="hyperabout">BlocSocIITR</span></a>. 
+                </div>
             </div>
         </div>
 
@@ -38,19 +44,24 @@
             <div class="about-body">
                 <div class="cat">$ ls -la ~/projects</div>
                 <div class="project-card">
-                    <div class="project-title">sample/</div>
-                    <div class="project-desc">abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz</div>
-                    <div class="project-link"> Github </div>
+                    <div class="project-title">Particle Collider/</div>
+                    <div class="project-desc">A physics simulated particle collider written in <span class="name">Golang</span> with gravity and collision control.</div>
+                    <div class="project-link"> <a href="https://github.com/namay26/particle_collider" target="_blank">Github</a> </div>
                 </div>
                 <div class="project-card">
-                    <div class="project-title">sample/</div>
-                    <div class="project-desc">abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz</div>
-                    <div class="project-link"> Github </div>
+                    <div class="project-title">ch3ckm8/</div>
+                    <div class="project-desc">A chess engine written in Golang, leveraging bitboards for efficient move generation and alpha-beta pruning.</div>
+                    <div class="project-link"> <a href="https://github.com/ashpect/ch3ckm8" target="_blank">Github</a> </div>
                 </div>
                 <div class="project-card">
-                    <div class="project-title">sample/</div>
-                    <div class="project-desc">abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz</div>
-                    <div class="project-link"> Github </div>
+                    <div class="project-title">MVC-LMS/</div>
+                    <div class="project-desc">A scalable Library Management System built with MVC architecture, powered by MySQL migrations, and deployed on Apache with automated setup via a Bash script. </div>
+                    <div class="project-link"><a href="https://github.com/namay26/MVC-LMS" target="_blank">Github</a> </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-title">TollChain/</div>
+                    <div class="project-desc">A blockchain-based FASTag alternative using RFID, on-chain payments, and Anon-Aadhaar–verified smart wallets for fully automated, transparent toll transactions.</div>
+                    <div class="project-link"> <a href="https://github.com/namay26/eth-fasttag" target="_blank">Github</a> </div>
                 </div>
             </div>
         </div>
@@ -125,10 +136,10 @@
 <!-- Thinking of a better way to do this? Probably make a json-card like container, but idk -->
                         <pre>
 {
-    "email" : "namayrohatgi@gmail.com",
-    "github" : "github.com/namay26",
-    "linkedin" : "linkedin.com/in/NamayRohatgi",
-    "twitter" : "@NamayRohatgi"
+    "email" : "<a href="mailto:namayrohatgi@gmail.com"><span class="hyperlink">namayrohatgi@gmail.com</span></a>",
+    "github" : "<a href="https://github.com/namay26" target="_blank"><span class="hyperlink">github.com/namay26</span></a>",
+    "linkedin" : "<a href="https://linkedin.com/in/NamayRohatgi" target="_blank"><span class="hyperlink">linkedin.com/in/NamayRohatgi</span></a>",
+    "twitter" : "<a href="https://twitter.com/NamayRohatgi" target="_blank"><span class="hyperlink">@NamayRohatgi</span></a>"
 }
                         </pre>
                     </div>
