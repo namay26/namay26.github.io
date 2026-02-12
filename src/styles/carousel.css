@@ -1,0 +1,49 @@
+/* Custom styles for react-slick carousel in dark theme */
+.projects-slider .slick-dots {
+  bottom: -50px;
+}
+
+.projects-slider .slick-dots li button:before {
+  color: #9ca3af;
+  font-size: 10px;
+}
+
+.projects-slider .slick-dots li.slick-active button:before {
+  color: #ffffff;
+}
+
+.projects-slider .slick-prev,
+.projects-slider .slick-next {
+  width: 40px;
+  height: 40px;
+  z-index: 1;
+}
+
+.projects-slider .slick-prev {
+  left: -50px;
+}
+
+.projects-slider .slick-next {
+  right: -50px;
+}
+
+.projects-slider .slick-prev:before,
+.projects-slider .slick-next:before {
+  color: #ffffff;
+  font-size: 40px;
+}
+
+@media (max-width: 768px) {
+  .projects-slider .slick-prev {
+    left: -25px;
+  }
+  
+  .projects-slider .slick-next {
+    right: -25px;
+  }
+
+  .projects-slider .slick-prev:before,
+  .projects-slider .slick-next:before {
+    font-size: 30px;
+  }
+}
