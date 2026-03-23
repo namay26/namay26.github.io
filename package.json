@@ -6,7 +6,7 @@
   "homepage": "https://namay26.github.io",
   "scripts": {
     "predeploy" : "npm run build",
-    "deploy" : "gh-pages -d dist",
+    "deploy" : "gh-pages -d dist -b main",
     "build": "vite build",
     "dev": "vite"
   },
