@@ -1,6 +1,13 @@
 export function Experience() {
   const experiences = [
     {
+      company: 'Nava (Formerly Kluisz AI)',
+      position: 'AI Infra',
+      period: 'May 2026 - July 2026',
+      description: 'Built an AI infrastructure layer for agentic systems by designing temporal knowledge-graph memory, scoped context retrieval, single-loop orchestration, event-driven ingestion, and DCIM/Redfish observability integrations for live distributed infrastructure reasoning.',
+      technologies: ['Golang', 'Agentic AI', 'Distributed Systems', 'Kubernetes', 'Inference Engineering']
+    },
+    {
       company: 'Google Summer of Code',
       position: 'Contributor',
       period: 'May 2025 - September 2025',
