@@ -4,16 +4,11 @@ export function About() {
       <div className="max-w-4xl">
         <h2 className="text-4xl md:text-5xl mb-8">About Me</h2>
         <div className="space-y-6 text-gray-300 text-lg">
-          <p>
-            I’m a software engineer who enjoys working close to the foundations of networking, distributed systems, and infrastructure.
-            My journey started with curiosity about how things work under the hood, and has grown into building scalable systems that bridges fun and functionality. :))
-          </p>
-          <p>
-            I work across the stack, with hands-on experience in Node.js, Golang, Python, and modern frontend frameworks, but mostly I love working with system design, concurrency, networking, and automation. I’ve contributed to open-source ecosystems like libp2p, working on cross-language interoperability and tooling.
-          </p>
-          <p>
-            Outside of coding, you’ll find me exploring technical rabbit holes (:P), playing guitar or chess or watching football.
-          </p>
+          <p> I’m a software engineer interested in the foundations of networking, distributed systems, cloud infrastructure, and agentic systems. I enjoy building systems that connect low-level infrastructure with higher-level intelligence- from agentic runtimes and context layers to scalable backend services, Kubernetes-native platforms, and distributed protocol tooling. </p>
+          
+          <p> I work across the stack with Golang, Python, Rust, and modern frameworks, but I’m most excited by system design, concurrency, networking, automation, cloud-native engineering, and infrastructure tooling. I’ve also contributed to open-source ecosystems like libp2p, focusing on cross-language interoperability and tooling for distributed systems. </p>
+          
+          <p> Outside of coding, you’ll usually find me exploring technical rabbit holes, reading random articles, meddling with my guitar, playing chess, or watching football. </p>  
           <div className="pt-6">
             <h3 className="text-2xl mb-4">Skills</h3>
             <div className="flex flex-wrap gap-3">
