@@ -1,99 +1,51 @@
-import Slider from 'react-slick';
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
-import { ExternalLink, Github } from 'lucide-react';
+const PROJECTS = [
+  {
+    title: 'Keystone',
+    date: 'Jan 2026',
+    description:
+      'A Go-based distributed key-value store with versioned conditional writes, atomic reads, and compare-and-swap semantics; a resilient client abstraction handling RPC retries, network failures, and ambiguous operation outcomes; a client-side distributed lock built on CAS-style conditional updates.',
+    stack: 'Go · RPC · Concurrency',
+    href: 'https://github.com/namay26/keystone',
+  },
+  {
+    title: 'Controlled Multi-Agent Task Orchestrator',
+    date: 'Jan 2026',
+    description:
+      'A state-driven plan-and-execute agent runtime with a central orchestrator controlling task decomposition, execution flow, and completion criteria — specialized agents for clarification, planning, and execution, with phase transitions and deterministic orchestration boundaries.',
+    stack: 'Python · Agentic AI · Orchestration',
+    href: 'https://github.com/namay26/Multi_Agent-Ochestrator',
+  },
+];
 
 export function Projects() {
-  const projects = [
-    {
-      title: 'Distributed Key-Value Server',
-      description: 'Designed a single-node linearizable KV store and a distributed lock using conditional updates, retry logic, and failure-aware client semantics.',
-      technologies: ['Golang', 'Distributed Systems'],
-      github: 'https://github.com/namay26/key-val',
-    },
-    {
-      title: 'IRMUN Website',
-        description: 'Built and deployed a production-grade event platform handling payments and concurrent traffic for 1,000+ users.',
-      technologies: ['React', 'Golang', 'Tailwind'],
-      demo: 'https://irmun.iitr.ac.in/'
-    },
-    {
-      title: 'Quizio',
-      description: 'An in-house quizzing platform built within SDSLabs, enabling users to create and participate in quizzes with video monitoring.',
-      technologies: ['TypeScript', 'React', 'MongoDB', 'Tailwind'],
-      demo: 'https://quizio.sdslabs.co/'
-    },
-    {
-      title: 'Controlled Multi-Agent Task Orchestrator',
-        description: 'A multi-agent system that orchestrates task execution with a central controller, ensuring task completion and autonomous agent workflow.',
-      technologies: ['Python', 'LangChain'],
-      github: 'https://github.com/namay26/Multi_Agent-Ochestrator',
-    },
-    {
-      title: 'ch3ckm8',
-      description: 'A chess engine written in Go, leveraging bitboards for efficient move generation and alpha-betapruning to optimize move search performance',
-      technologies: ['Golang'],
-      github: 'https://github.com/ashpect/ch3ckm8',
-    }
-  ];
-
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 5000,
-    arrows: true
-  };
-
   return (
-    <section id="projects" className="min-h-screen flex items-center justify-center px-6 py-20">
-      <div className="max-w-4xl w-full">
-        <h2 className="text-4xl md:text-5xl mb-12">Projects</h2>
-        <Slider {...settings} className="projects-slider">
-          {projects.map((project, index) => (
-            <div key={index} className="px-4">
-              <div className="bg-gray-800 border border-gray-700 rounded-lg p-8 h-auto">
-                <h3 className="text-3xl mb-4">{project.title}</h3>
-                <p className="text-gray-300 text-lg mb-6">
-                  {project.description}
-                </p>
-                <div className="flex flex-wrap gap-2 mb-6">
-                  {project.technologies.map((tech) => (
-                    <span 
-                      key={tech} 
-                      className="bg-gray-900 border border-gray-600 px-3 py-1 rounded text-sm"
-                    >
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-                <div className="flex gap-4">
-                  {project.github && (
-                  <a 
-                    href={project.github}
-                    className="flex items-center gap-2 text-gray-300 hover:text-white transition-colors"
-                  >
-                    <Github className="w-5 h-5" />
-                    Code
-                  </a>
-                  )}
-                  {project.demo && (
-                    <a 
-                      href={project.demo}
-                      className="flex items-center gap-2 text-gray-300 hover:text-white transition-colors"
-                    >
-                      <ExternalLink className="w-5 h-5" />
-                      Live Demo
-                    </a>
-                  )}
-                </div>
+    <section id="projects" className="mx-auto max-w-2xl px-6 py-16">
+      <div className="mb-2 font-mono text-xs tracking-wide text-text-dim uppercase">Things I've built</div>
+
+      <div className="flex flex-col">
+        {PROJECTS.map((project) => (
+          <div
+            key={project.title}
+            className="flex items-start justify-between gap-5 border-b border-border py-6 first:pt-4"
+          >
+            <div className="flex max-w-[46ch] flex-col gap-1.5">
+              <div className="text-[17px] font-medium text-text">
+                {project.title}{' '}
+                <span className="font-mono text-xs font-normal text-text-dim">— {project.date}</span>
               </div>
+              <div className="text-[14.5px] leading-relaxed text-text-muted">{project.description}</div>
+              <div className="font-mono text-xs text-text-dim">{project.stack}</div>
             </div>
-          ))}
-        </Slider>
+            <a
+              href={project.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="pt-1 font-mono text-sm whitespace-nowrap text-accent"
+            >
+              code →
+            </a>
+          </div>
+        ))}
       </div>
     </section>
   );

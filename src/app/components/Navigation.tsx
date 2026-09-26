@@ -1,25 +1,41 @@
 import { useEffect, useState } from 'react';
 
+const LINKS = [
+  { id: 'experience', label: 'work' },
+  { id: 'projects', label: 'projects' },
+  { id: 'achievements', label: 'achievements' },
+  { id: 'contact', label: 'contact' },
+];
+
+const THEME_STORAGE_KEY = 'theme';
+
+type Theme = 'dark' | 'light';
+
+function getInitialTheme(): Theme {
+  if (typeof window === 'undefined') return 'dark';
+  const stored = window.localStorage.getItem(THEME_STORAGE_KEY);
+  return stored === 'light' || stored === 'dark' ? stored : 'dark';
+}
+
 export function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [theme, setTheme] = useState<Theme>(getInitialTheme);
+
+  useEffect(() => {
+    document.documentElement.dataset.theme = theme;
+    window.localStorage.setItem(THEME_STORAGE_KEY, theme);
+  }, [theme]);
 
   useEffect(() => {
     if (!isMenuOpen) return;
 
-    const handleScroll = () => {
-      setIsMenuOpen(false);
-    };
-
+    const handleScroll = () => setIsMenuOpen(false);
     window.addEventListener('scroll', handleScroll, { passive: true });
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
+    return () => window.removeEventListener('scroll', handleScroll);
   }, [isMenuOpen]);
 
   const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    element?.scrollIntoView({ behavior: 'smooth' });
+    document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
   };
 
   const handleSectionClick = (sectionId: string) => {
@@ -27,108 +43,63 @@ export function Navigation() {
     setIsMenuOpen(false);
   };
 
-  const handleResumeClick = () => {
-    window.open("https://drive.google.com/file/d/1FBeMo0n230P4_PNRHJbOlVgAC5eFYo0l/view?usp=sharing", "_blank");
-    setIsMenuOpen(false);
-  };
-
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-sm border-b border-gray-800">
-      <div className="max-w-6xl mx-auto px-6 py-4">
-        <div className="flex justify-between items-center">
-          <button 
-            onClick={() => {
-              window.scrollTo({ top: 0, behavior: 'smooth' });
-              setIsMenuOpen(false);
-            }}
-            className="text-xl hover:text-gray-300 transition-colors"
-          >
-            NR
-          </button>
-
-          <div className="hidden md:flex gap-8">
-            <button 
-              onClick={() => scrollToSection('about')}
-              className="hover:text-gray-300 transition-colors"
-            >
-              About
-            </button>
-            <button 
-              onClick={() => scrollToSection('experience')}
-              className="hover:text-gray-300 transition-colors"
-            >
-              Experience
-            </button>
-            <button 
-              onClick={() => scrollToSection('projects')}
-              className="hover:text-gray-300 transition-colors"
-            >
-              Projects
-            </button>
-            <button 
-              onClick={() => window.open("https://drive.google.com/file/d/1FBeMo0n230P4_PNRHJbOlVgAC5eFYo0l/view?usp=sharing", "_blank")}
-              className="hover:text-gray-300 transition-colors"
-            >
-              Resume
-            </button>
-            <button 
-              onClick={() => scrollToSection('contact')}
-              className="hover:text-gray-300 transition-colors"
-            >
-              Contact
-            </button>
-          </div>
-
-          <button
-            onClick={() => setIsMenuOpen((prev) => !prev)}
-            className="md:hidden text-2xl leading-none hover:text-gray-300 transition-colors"
-            aria-label="Toggle navigation menu"
-            aria-expanded={isMenuOpen}
-            aria-controls="mobile-menu"
-          >
-            {isMenuOpen ? '✕' : '☰'}
-          </button>
-        </div>
-
-        <div
-          id="mobile-menu"
-          className={`md:hidden overflow-hidden border-gray-800 flex flex-col gap-4 transition-all duration-300 ease-out ${
-            isMenuOpen
-              ? 'max-h-80 opacity-100 mt-4 pt-4 border-t'
-              : 'max-h-0 opacity-0 mt-0 pt-0 border-t-0 pointer-events-none'
-          }`}
+    <nav className="sticky top-0 z-50 bg-bg/90 backdrop-blur-sm">
+      <div className="mx-auto flex max-w-2xl items-center justify-between px-6 py-6">
+        <button
+          onClick={() => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+            setIsMenuOpen(false);
+          }}
+          className="font-mono text-[13px] font-medium tracking-wide whitespace-nowrap"
         >
-            <button
-              onClick={() => handleSectionClick('about')}
-              className="text-left hover:text-gray-300 transition-colors"
-            >
-              About
+          NAMAY ROHATGI
+        </button>
+
+        <div className="hidden items-center gap-4 font-mono text-xs tracking-wide whitespace-nowrap text-text-dim md:flex">
+          {LINKS.map((link) => (
+            <button key={link.id} onClick={() => scrollToSection(link.id)} className="hover:text-accent">
+              {link.label}
             </button>
-            <button
-              onClick={() => handleSectionClick('experience')}
-              className="text-left hover:text-gray-300 transition-colors"
-            >
-              Experience
-            </button>
-            <button
-              onClick={() => handleSectionClick('projects')}
-              className="text-left hover:text-gray-300 transition-colors"
-            >
-              Projects
-            </button>
-            <button
-              onClick={handleResumeClick}
-              className="text-left hover:text-gray-300 transition-colors"
-            >
-              Resume
-            </button>
-            <button
-              onClick={() => handleSectionClick('contact')}
-              className="text-left hover:text-gray-300 transition-colors"
-            >
-              Contact
-            </button>
+          ))}
+          <button
+            onClick={() => setTheme((t) => (t === 'dark' ? 'light' : 'dark'))}
+            aria-label="Toggle color theme"
+            className="rounded border border-border-muted px-2.5 py-1 hover:text-accent"
+          >
+            {theme === 'dark' ? 'light' : 'dark'}
+          </button>
         </div>
+
+        <button
+          onClick={() => setIsMenuOpen((prev) => !prev)}
+          className="font-mono text-xs md:hidden"
+          aria-label="Toggle navigation menu"
+          aria-expanded={isMenuOpen}
+          aria-controls="mobile-menu"
+        >
+          {isMenuOpen ? 'close' : 'menu'}
+        </button>
+      </div>
+
+      <div
+        id="mobile-menu"
+        className={`flex flex-col gap-4 overflow-hidden border-border px-6 font-mono text-xs tracking-wide text-text-dim transition-all duration-300 ease-out md:hidden ${
+          isMenuOpen ? 'max-h-80 border-t pt-4 pb-6 opacity-100' : 'max-h-0 border-t-0 py-0 opacity-0'
+        }`}
+      >
+        {LINKS.map((link) => (
+          <button key={link.id} onClick={() => handleSectionClick(link.id)} className="text-left">
+            {link.label}
+          </button>
+        ))}
+        <button
+          onClick={() => setTheme((t) => (t === 'dark' ? 'light' : 'dark'))}
+          aria-label="Toggle color theme"
+          className="text-left"
+        >
+          {theme === 'dark' ? 'light mode' : 'dark mode'}
+        </button>
       </div>
     </nav>
   );

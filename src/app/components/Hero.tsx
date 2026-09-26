@@ -1,38 +1,43 @@
-import { Github, Linkedin, Mail } from "lucide-react";
-import { ImageWithFallback } from "./figma/ImageWithFallback";
-import meImage from "../assets/me.png";
+const SKILLS = [
+  'Go',
+  'Python',
+  'C++',
+  'TypeScript',
+  'Distributed Systems',
+  'Kubernetes',
+  'AWS',
+  'Networking',
+  'LangGraph',
+  'LangChain',
+  'Knowledge Graphs',
+  'RAG',
+];
 
 export function Hero() {
   return (
-    <section className="min-h-screen flex items-center justify-center px-6">
-      <div className="max-w-4xl text-center">
-        <div className="mb-8 flex justify-center">
-          <ImageWithFallback
-            src={meImage}
-            alt="Profile picture"
-            className="w-32 h-32 rounded-full object-cover border-4 border-gray-700"
-          />
-        </div>
-        <h1 className="text-5xl md:text-7xl mb-6">Hi, I'm Namay Rohatgi</h1>
-        <p className="text-xl md:text-2xl text-gray-400 mb-8">
-          Software Developer
-        </p>
-        <p className="text-lg text-gray-300 max-w-2xl mx-auto mb-12">
-         I build fun, scalable projects and contribute to open source.
-        </p>
-        <div className="flex gap-6 justify-center">
-          <a
-            href="#contact"
-            className="bg-white text-black px-8 py-3 rounded-lg hover:bg-gray-200 transition-colors"
-          >
-            Get in Touch
-          </a>
-          <a
-            href="#projects"
-            className="border border-gray-600 px-8 py-3 rounded-lg hover:bg-gray-800 transition-colors"
-          >
-            View Projects
-          </a>
+    <section className="mx-auto max-w-2xl px-6 pt-16 pb-20">
+      <h1 className="mb-6 text-[40px] leading-[1.25] font-medium tracking-[-0.01em] md:text-5xl">
+        Software engineer working close to the metal — distributed systems, networking, and lately, AI
+        infrastructure.
+      </h1>
+      <p className="mb-3 max-w-[56ch] text-lg leading-relaxed text-text-muted">
+        I'm Namay. I like systems that stay correct under load — consensus, retries, memory that doesn't quietly rot.
+        Currently building knowledge graphs and hybrid RAG systems as a Machine Learning Engineer at Athira; before
+        that, agent orchestration and inference infrastructure at Nava, and protocol-level honeypot work through
+        Google Summer of Code.
+      </p>
+      <p className="text-[15px] leading-relaxed text-text-muted">
+        Based in Delhi, India · <a href="mailto:namayrohatgi@gmail.com">namayrohatgi@gmail.com</a>
+      </p>
+
+      <div className="mt-10 border-t border-border pt-6">
+        <div className="flex flex-wrap gap-x-3 gap-y-2 font-mono text-xs text-text-dim">
+          {SKILLS.map((skill, i) => (
+            <span key={skill}>
+              {skill}
+              {i < SKILLS.length - 1 && <span className="ml-3 text-border-muted">·</span>}
+            </span>
+          ))}
         </div>
       </div>
     </section>
