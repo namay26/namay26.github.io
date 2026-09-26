@@ -1,0 +1,49 @@
+@theme {
+  --color-bg: #111110;
+  --color-text: #f1efe9;
+  --color-text-muted: color-mix(in srgb, var(--color-text) 62%, var(--color-bg));
+  --color-text-dim: color-mix(in srgb, var(--color-text) 42%, var(--color-bg));
+  --color-border: color-mix(in srgb, var(--color-text) 12%, var(--color-bg));
+  --color-border-muted: color-mix(in srgb, var(--color-text) 30%, var(--color-bg));
+  --color-accent: #7fa8dd;
+
+  --font-sans: 'Source Serif 4', Georgia, 'Times New Roman', serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, monospace;
+}
+
+:root[data-theme='light'] {
+  --color-bg: #faf9f5;
+  --color-text: #161513;
+  --color-accent: #2454a6;
+}
+
+@layer base {
+  body {
+    @apply bg-bg text-text;
+    font-family: var(--font-sans);
+    transition:
+      background-color 0.15s ease,
+      color 0.15s ease;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-sans);
+  }
+
+  a {
+    color: var(--color-accent);
+    text-decoration: underline;
+    text-decoration-color: color-mix(in srgb, var(--color-accent) 40%, transparent);
+    text-underline-offset: 3px;
+  }
+
+  a:hover {
+    text-decoration-color: var(--color-accent);
+  }
+
+  ::selection {
+    background: color-mix(in srgb, var(--color-accent) 25%, transparent);
+  }
+}
