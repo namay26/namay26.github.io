@@ -17,13 +17,13 @@ export function Hero() {
   return (
     <section className="mx-auto max-w-2xl px-6 pt-16 pb-20">
       <h1 className="mb-6 text-[40px] leading-[1.25] font-medium tracking-[-0.01em] md:text-5xl">
-        Software engineer working close to the metal — distributed systems, networking, and lately, AI
+        Software engineer working on distributed systems, networking, and lately, AI
         infrastructure.
       </h1>
       <p className="mb-3 max-w-[56ch] text-lg leading-relaxed text-text-muted">
-        I'm Namay. I like systems that stay correct under load — consensus, retries, memory that doesn't quietly rot.
-        Currently building knowledge graphs and hybrid RAG systems as a Machine Learning Engineer at Athira; before
-        that, agent orchestration and inference infrastructure at Nava, and protocol-level honeypot work through
+        I'm Namay. I like to work on scalable systems and infrastructure. <br />
+        Currently building knowledge graphs and hybrid RAG systems as a Machine Learning Engineer at Athira, before
+        that, agent orchestration and inference infrastructure at Nava, and protocol-level networking work through
         Google Summer of Code.
       </p>
       <p className="text-[15px] leading-relaxed text-text-muted">
