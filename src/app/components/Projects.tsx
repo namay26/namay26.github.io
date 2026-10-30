@@ -1,5 +1,13 @@
 const PROJECTS = [
   {
+    title: 'Handoff Lab',
+    date: 'Oct 2026',
+    description:
+      'An inspectable coding-agent harness for studying context and task handoffs. It records append-only traces, resumes fresh sessions from checkpoints, runs fixed acceptance checks, and compares handoff strategies.',
+    stack: 'Python · Agentic AI · Evaluation',
+    href: 'https://github.com/namay26/handoff-lab',
+  },
+  {
     title: 'Keystone',
     date: 'Jan 2026',
     description:
