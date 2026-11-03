@@ -13,6 +13,9 @@ export function Contact() {
         <a href="https://linkedin.com/in/NamayRohatgi" target="_blank" rel="noopener noreferrer">
           linkedin
         </a>
+        <a href="https://x.com/NamayRohatgi" target="_blank" rel="noopener noreferrer">
+          twitter
+        </a>
       </div>
     </section>
   );
